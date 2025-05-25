@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-gray-100 text-gray-800 py-10">
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div className="w-full px-4 grid grid-cols-1 md:grid-cols-4 gap-6">
         {footerData.sections.map((section, index) => (
           <div key={index}>
             <h3 className="text-sm font-semibold uppercase mb-2">{section.title}</h3>

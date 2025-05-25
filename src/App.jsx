@@ -1,15 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./pages/components/navbar/Nabar";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import Navbar from "./pages/components/navbar/Navbar";
 import Footer from "./pages/components/footer/Footer";
-import Hero from "./pages/components/hero/Hero";
+import HomePage from "./pages/components/hero/HomePage";
 import NotFound from "./pages/components/notFound/NotFound";
-
-// Optional: uncomment when pages are ready
-// import HomePage from "./pages/HomePage";
-// import ProductPage from "./pages/ProductPage";
-// import CartPage from "./pages/CartPage";
-// import CheckoutPage from "./pages/CheckoutPage";
+import  WomenLabels from './pages/components/hero/the_biggest_labels_cart/WomenLabels';
+import MenLabels from './pages/components/hero/the_biggest_labels_cart/MenLabels'
 
 function App() {
   const navLinks = [
@@ -26,6 +24,22 @@ function App() {
 
   const isAuthenticated = false;
 
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      easing: 'ease-in-out', // Animation easing
+      once: true, // Whether animation should happen only once
+      mirror: false, // Whether elements should animate out while scrolling past them
+      offset: 100, // Offset (in px) from the original trigger point
+    });
+
+    // Refresh AOS on route changes
+    return () => {
+      AOS.refresh();
+    };
+  }, []);
+
   return (
     <Router>
       <div className="min-h-screen flex flex-col">
@@ -37,13 +51,23 @@ function App() {
 
         <main className="flex-grow">
           <Routes>
-            {/* Uncomment when pages are ready */}
-            {/* <Route path="/" element={<HomePage />} /> */}
-            {/* <Route path="/product/:id" element={<ProductPage />} /> */}
-            {/* <Route path="/cart" element={<CartPage />} /> */}
-            {/* <Route path="/checkout" element={<CheckoutPage />} /> */}
+            <Route 
+              path="/" 
+              element={
+                <>
+                  <div data-aos="fade-up">
+                    <HomePage />
+                  </div>
+                  <div data-aos="fade-up" data-aos-delay="200">
+                    <WomenLabels />
+                  </div>
+                  <div data-aos="fade-up" data-aos-delay="400">
+                    <MenLabels />
+                  </div>
+                </>
+              } 
+            />
 
-            <Route path="/" element={<Hero />} />
             <Route path="/notfound" element={<NotFound />} />
           </Routes>
         </main>
@@ -55,6 +79,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
