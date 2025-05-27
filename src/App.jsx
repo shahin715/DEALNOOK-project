@@ -8,6 +8,7 @@ import HomePage from "./pages/components/hero/HomePage";
 import NotFound from "./pages/components/notFound/NotFound";
 import  WomenLabels from './pages/components/hero/the_biggest_labels_cart/WomenLabels';
 import MenLabels from './pages/components/hero/the_biggest_labels_cart/MenLabels'
+import NewIn from "./pages/components/navbar/navbar_Component/newIn/NewIn"
 
 function App() {
   const navLinks = [
@@ -69,6 +70,7 @@ function App() {
             />
 
             <Route path="/notfound" element={<NotFound />} />
+            <Route path="/newin" element={<NewIn />} />
           </Routes>
         </main>
 

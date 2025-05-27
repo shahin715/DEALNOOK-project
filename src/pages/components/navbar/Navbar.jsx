@@ -73,7 +73,7 @@ const Navbar = () => {
           <div className="flex flex-col gap-4">
             <Link to="/women" className="text-white text-xl hover:text-gray-400">Women</Link>
             <Link to="/men" className="text-white text-xl hover:text-gray-400">Men</Link>
-            <Link to="/new-in" className="text-white text-xl hover:text-gray-400">New In</Link>
+            <Link to="/newin" className="text-white text-xl hover:text-gray-400">New In</Link>
             <Link to="/clothing" className="text-white text-xl hover:text-gray-400">Clothing</Link>
             <Link to="/trending" className="text-white text-xl hover:text-gray-400">Trending</Link>
             <Link to="/brands" className="text-white text-xl hover:text-gray-400">Brands</Link>
@@ -86,7 +86,7 @@ const Navbar = () => {
       <div style={{ backgroundColor: '#727472' }} className="text-white sm:block hidden">
         <div className="container mx-auto px-4 py-2">
           <div className="flex items-center justify-between space-x-4">
-            <Link to="/new-in" className="hover:text-gray-400">New In</Link>
+            <Link to="/newin" className="hover:text-gray-400">New In</Link>
             <Link to="/clothing" className="hover:text-gray-400">Clothing</Link>
             <Link to="/trending" className="hover:text-gray-400">Trending</Link>
             <Link to="/dresses" className="hover:text-gray-400">Dresses</Link>

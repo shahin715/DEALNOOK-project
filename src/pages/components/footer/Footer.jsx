@@ -42,7 +42,7 @@ const Footer = () => {
         <p className="mt-2 space-x-2">
           <Link to="/notfound" className="hover:underline">Privacy & Cookies</Link> | 
           <Link to="/notfound" className="hover:underline">Ts&Cs</Link> | 
-          <Link to="/notfound" className="hover:underline">Accessibility</Link>
+          <Link to="/newin" className="hover:underline">Accessibility</Link>
         </p>
       </div>
     </footer>
